@@ -27,7 +27,7 @@ designed to reduce the number of queries to the db, caching the
 results when possible. An Admin class is provided to easily manage
 translations (add/remove a language, add/remove a string).
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Ta klasa dostarcza ³atwego w u¿yciu sposobu do wydobywania ci±gów
