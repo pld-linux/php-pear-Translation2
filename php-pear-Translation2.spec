@@ -3,8 +3,8 @@
 %define		_status		alpha
 %define		_pearname	%{_class}
 
-Summary:	%{_pearname} - Class for multilingual applications management.
-Summary(pl):	%{_pearname} - Klasa do zarz±dzania wersjami jêzykowymi aplikacji.
+Summary:	%{_pearname} - Class for multilingual applications management
+Summary(pl):	%{_pearname} - Klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	0.0.1
 Release:	1
@@ -22,21 +22,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This class provides an easy way to retrieve all the strings for a
 multilingual site from a data source (i.e. db). A PEAR::DB and a
 PEAR::MDB container are provided, more containers will follow. It is
-designed to reduce the number of queries to the db, caching the results
-when possible. An Admin class is provided to easily manage translations
-(add/remove a language, add/remove a string).
+designed to reduce the number of queries to the db, caching the
+results when possible. An Admin class is provided to easily manage
+translations (add/remove a language, add/remove a string).
 
 This class has in PEAR status: %{_status}.
 
 %description -l pl
-Ta klasa dostarcza ³atwego w u¿yciu sposobu do wydobywania ci±gów znaków
-dla stron wielojêzykowych z podanego ¼ród³a danych (np. bazy danych).
-Na chwilê obecn± dostêpne s± kontenery PEAR::DB oraz PEAR::MDB - inne
-bêd± dostêpne w niedalekiej przysz³o¶ci. Klasa zosta³a zaprojektowana
-tak, aby ograniczaæ liczbê zapytañ do bazy danych, oraz buforowania
-wyników o ile jest to mo¿liwe. Za pomoc± klasy Admin mo¿liwe jest ³atwe
-i wygodne zarz±dzanie t³umaczeniami (dodawanie/usuwanie jêzyków b±d¼
-poszczególnych t³umaczeñ).
+Ta klasa dostarcza ³atwego w u¿yciu sposobu do wydobywania ci±gów
+znaków dla stron wielojêzycznych z podanego ¼ród³a danych (np. bazy
+danych). Na chwilê obecn± dostêpne s± kontenery PEAR::DB oraz
+PEAR::MDB - inne bêd± dostêpne w niedalekiej przysz³o¶ci. Klasa
+zosta³a zaprojektowana tak, aby ograniczaæ liczbê zapytañ do bazy
+danych, oraz buforowania wyników o ile jest to mo¿liwe. Za pomoc±
+klasy Admin mo¿liwe jest ³atwe i wygodne zarz±dzanie t³umaczeniami
+(dodawanie/usuwanie jêzyków b±d¼ poszczególnych t³umaczeñ).
 
 Ta klasa ma w PEAR status: %{_status}.
 
