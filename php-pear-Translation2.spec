@@ -1,10 +1,10 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Translation2
+%define		_class		Translation2
 %define		_status		alpha
 %define		_pearname	%{_class}
 
-Summary:	%{_pearname} - Class for multilingual applications management
-Summary(pl):	%{_pearname} - Klasa do zarz±dzania wersjami jêzykowymi aplikacji
+Summary:	%{_pearname} - class for multilingual applications management
+Summary(pl):	%{_pearname} - klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
 %define	_version 2.0.0alpha2
