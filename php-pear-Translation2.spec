@@ -6,12 +6,13 @@
 Summary:	%{_pearname} - Class for multilingual applications management
 Summary(pl):	%{_pearname} - Klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
-Version:	0.0.1
-Release:	1
+Version:	2.0.0
+%define	_version 2.0.0alpha2
+Release:	0.alpha2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	109a3eb1ce26dc0ffb9965a423fc46b0
+Source0:	http://pear.php.net/get/%{_pearname}-%{_version}.tgz
+# Source0-md5:	fbc231fb6e98bc5144f4de8dcb0a796b
 URL:		http://pear.php.net/package/Translation2/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -47,15 +48,15 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{Admin/Container,Container}
 
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/Admin/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin
-install %{_pearname}-%{version}/Admin/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin/Container
-install %{_pearname}-%{version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
+install %{_pearname}-%{_version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{_version}/Admin/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin
+install %{_pearname}-%{_version}/Admin/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin/Container
+install %{_pearname}-%{_version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/examples
+%doc %{_pearname}-%{_version}/docs
 %{php_pear_dir}/%{_class}
