@@ -7,12 +7,12 @@ Summary:	%{_pearname} - class for multilingual applications management
 Summary(pl):	%{_pearname} - klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-%define	_version 2.0.0beta1
+%define	_version 2.0.0beta4
 Release:	0.beta
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{_version}.tgz
-# Source0-md5:	a656170f1f11b48158d695e6f28c2d40
+# Source0-md5:	349dc87b7cdd148b30a8e50848bbd2d7
 URL:		http://pear.php.net/package/Translation2/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
