@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Translation2
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	%{_class}
 
 Summary:	%{_pearname} - class for multilingual applications management
 Summary(pl):	%{_pearname} - klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-%define	_version 2.0.0alpha2
-Release:	0.alpha2
+%define	_version 2.0.0beta1
+Release:	0.beta
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{_version}.tgz
-# Source0-md5:	fbc231fb6e98bc5144f4de8dcb0a796b
+# Source0-md5:	a656170f1f11b48158d695e6f28c2d40
 URL:		http://pear.php.net/package/Translation2/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -49,7 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{Admin/Container,Container}
 
 install %{_pearname}-%{_version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{_version}/Admin/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin
 install %{_pearname}-%{_version}/Admin/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin/Container
 install %{_pearname}-%{_version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
 
