@@ -7,17 +7,21 @@ Summary:	%{_pearname} - class for multilingual applications management
 Summary(pl):	%{_pearname} - klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-%define	_version 2.0.0beta6
-Release:	0.beta6.1
+%define	_beta	beta6
+%define	_rel	2
+Release:	0.%{_beta}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{_version}.tgz
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_beta}.tgz
 # Source0-md5:	fab1b6dbbad1f46ea5e9cb67fd01561c
 URL:		http://pear.php.net/package/Translation2/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# exclude optional dependencies
+%define		_noautoreq	'pear(Cache/Lite.*)' 'pear(DB.*)' 'pear(DB/DataObject.*)' 'pear(MDB.*)' 'pear(MDB2.*)' 'pear(gettext.*)' 'pear(File/Gettext.*)' 'pear(I18Nv2.*)' 'pear(XML/Serializer.*)'
 
 %description
 This class provides an easy way to retrieve all the strings for a
@@ -41,23 +45,43 @@ klasy Admin mo¿liwe jest ³atwe i wygodne zarz±dzanie t³umaczeniami
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl):	Testy dla PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+AutoReq:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl
+Testy dla PEAR::%{_pearname}.
+
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{Admin/Container,Container}
-
-install %{_pearname}-%{_version}/%{_pearname}.php $RPM_BUILD_ROOT%{php_pear_dir}/
-install %{_pearname}-%{_version}/{Admin,Container,Decorator}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{_version}/Admin/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Admin/Container
-install %{_pearname}-%{_version}/Container/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/Container
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
+
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{_version}/docs
+%doc install.log
+%doc docs/%{_pearname}/*
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}.php
 %{php_pear_dir}/%{_class}
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
