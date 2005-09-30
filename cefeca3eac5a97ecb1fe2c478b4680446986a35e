@@ -1,0 +1,2 @@
+- install Translation2.php in %{php_pear_dir}, not in %{php_pear_dir}/Translation2
+- release .2
