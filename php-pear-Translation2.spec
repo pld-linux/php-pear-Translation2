@@ -8,7 +8,7 @@ Summary(pl):	%{_pearname} - klasa do zarz±dzania wersjami jêzykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
 %define	_beta	beta8
-%define	_rel	1
+%define	_rel	2
 Release:	0.%{_beta}.%{_rel}
 Epoch:		0
 License:	PHP 2.02
