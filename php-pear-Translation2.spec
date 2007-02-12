@@ -6,7 +6,7 @@
 %define	_beta	beta12
 %define	_rel	1
 Summary:	%{_pearname} - class for multilingual applications management
-Summary(pl.UTF-8):   %{_pearname} - klasa do zarządzania wersjami językowymi aplikacji
+Summary(pl.UTF-8):	%{_pearname} - klasa do zarządzania wersjami językowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
 Release:	0.%{_beta}.%{_rel}
@@ -50,7 +50,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
