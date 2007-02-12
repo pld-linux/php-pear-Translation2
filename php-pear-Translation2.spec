@@ -6,7 +6,7 @@
 %define	_beta	beta12
 %define	_rel	1
 Summary:	%{_pearname} - class for multilingual applications management
-Summary(pl):	%{_pearname} - klasa do zarz±dzania wersjami jêzykowymi aplikacji
+Summary(pl.UTF-8):   %{_pearname} - klasa do zarzÄ…dzania wersjami jÄ™zykowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
 Release:	0.%{_beta}.%{_rel}
@@ -36,21 +36,21 @@ translations (add/remove a language, add/remove a string).
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ta klasa dostarcza ³atwego w u¿yciu sposobu do wydobywania ci±gów
-znaków dla stron wielojêzycznych z podanego ¼ród³a danych (np. bazy
-danych). Na chwilê obecn± dostêpne s± kontenery PEAR::DB oraz
-PEAR::MDB - inne bêd± dostêpne w niedalekiej przysz³o¶ci. Klasa
-zosta³a zaprojektowana tak, aby ograniczaæ liczbê zapytañ do bazy
-danych, oraz buforowania wyników o ile jest to mo¿liwe. Za pomoc±
-klasy Admin mo¿liwe jest ³atwe i wygodne zarz±dzanie t³umaczeniami
-(dodawanie/usuwanie jêzyków b±d¼ poszczególnych t³umaczeñ).
+%description -l pl.UTF-8
+Ta klasa dostarcza Å‚atwego w uÅ¼yciu sposobu do wydobywania ciÄ…gÃ³w
+znakÃ³w dla stron wielojÄ™zycznych z podanego ÅºrÃ³dÅ‚a danych (np. bazy
+danych). Na chwilÄ™ obecnÄ… dostÄ™pne sÄ… kontenery PEAR::DB oraz
+PEAR::MDB - inne bÄ™dÄ… dostÄ™pne w niedalekiej przyszÅ‚oÅ›ci. Klasa
+zostaÅ‚a zaprojektowana tak, aby ograniczaÄ‡ liczbÄ™ zapytaÅ„ do bazy
+danych, oraz buforowania wynikÃ³w o ile jest to moÅ¼liwe. Za pomocÄ…
+klasy Admin moÅ¼liwe jest Å‚atwe i wygodne zarzÄ…dzanie tÅ‚umaczeniami
+(dodawanie/usuwanie jÄ™zykÃ³w bÄ…dÅº poszczegÃ³lnych tÅ‚umaczeÅ„).
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -59,7 +59,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
