@@ -4,7 +4,7 @@
 %define		_pearname	%{_class}
 
 %define	_beta	RC3
-%define	_rel	1
+%define	_rel	2
 Summary:	%{_pearname} - class for multilingual applications management
 Summary(pl.UTF-8):	%{_pearname} - klasa do zarządzania wersjami językowymi aplikacji
 Name:		php-pear-%{_pearname}
