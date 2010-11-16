@@ -5,7 +5,7 @@ Summary:	%{_pearname} - class for multilingual applications management
 Summary(pl.UTF-8):	%{_pearname} - klasa do zarządzania wersjami językowymi aplikacji
 Name:		php-pear-%{_pearname}
 Version:	2.0.3
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -58,6 +58,9 @@ Ta klasa ma w PEAR status: %{_status}.
 
 mv docs/%{_pearname}/docs/examples .
 
+# fix dir
+mv .%{php_pear_dir}/Translation2/Translation2.php .%{php_pear_dir}/Translation2.php
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
@@ -82,6 +85,7 @@ fi
 %doc install.log optional-packages.txt
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
+%{php_pear_dir}/Translation2.php
 %{php_pear_dir}/Translation2
 
 %{_examplesdir}/%{name}-%{version}
