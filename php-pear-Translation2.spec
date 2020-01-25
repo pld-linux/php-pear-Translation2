@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		stable
 %define		_pearname	Translation2
 Summary:	%{_pearname} - class for multilingual applications management
